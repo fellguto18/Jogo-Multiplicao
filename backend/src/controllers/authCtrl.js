@@ -10,12 +10,12 @@ const authCtrl = {
       const novoUtilizador = await Player.create({ nome, email, senha, tipo });
 
       res.status(201).json({ 
-        mensagem: "Utilizador criado com sucesso!", 
+        mensagem: "Usuário criado com sucesso!", 
         utilizador: novoUtilizador 
       });
     } catch (erro) {
       console.error(erro);
-      res.status(500).json({ erro: "Erro ao registar o utilizador no sistema." });
+      res.status(500).json({ erro: "Erro ao registar o usuário no sistema." });
     }
   },
 
